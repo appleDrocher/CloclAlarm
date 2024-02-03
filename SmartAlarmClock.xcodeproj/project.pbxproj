@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7A3410E72B6EB53C003E5901 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3410E62B6EB53C003E5901 /* AppDelegate.swift */; };
+		7A3410E92B6EB53C003E5901 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3410E82B6EB53C003E5901 /* SceneDelegate.swift */; };
+		7A3410EB2B6EB53C003E5901 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3410EA2B6EB53C003E5901 /* ViewController.swift */; };
+		7A3410EE2B6EB53C003E5901 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A3410EC2B6EB53C003E5901 /* Main.storyboard */; };
+		7A3410F12B6EB53C003E5901 /* SmartAlarmClock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A3410EF2B6EB53C003E5901 /* SmartAlarmClock.xcdatamodeld */; };
+		7A3410F32B6EB53E003E5901 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A3410F22B6EB53E003E5901 /* Assets.xcassets */; };
+		7A3410F62B6EB53E003E5901 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A3410F42B6EB53E003E5901 /* LaunchScreen.storyboard */; };
+		7A3411062B6EB723003E5901 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3411052B6EB723003E5901 /* Alarm.swift */; };
+		7A3411082B6EB72D003E5901 /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3411072B6EB72D003E5901 /* Scanner.swift */; };
+		7A34110C2B6EB7F1003E5901 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A34110B2B6EB7F1003E5901 /* Manager.swift */; };
+		7A3411132B6EBA24003E5901 /* ClockAlarm+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3411112B6EBA24003E5901 /* ClockAlarm+CoreDataClass.swift */; };
+		7A3411142B6EBA24003E5901 /* ClockAlarm+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3411122B6EBA24003E5901 /* ClockAlarm+CoreDataProperties.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7A3410E32B6EB53C003E5901 /* SmartAlarmClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartAlarmClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A3410E62B6EB53C003E5901 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7A3410E82B6EB53C003E5901 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7A3410EA2B6EB53C003E5901 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7A3410ED2B6EB53C003E5901 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7A3410F02B6EB53C003E5901 /* SmartAlarmClock.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmartAlarmClock.xcdatamodel; sourceTree = "<group>"; };
+		7A3410F22B6EB53E003E5901 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A3410F52B6EB53E003E5901 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7A3410F72B6EB53E003E5901 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A3411052B6EB723003E5901 /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		7A3411072B6EB72D003E5901 /* Scanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scanner.swift; sourceTree = "<group>"; };
+		7A34110B2B6EB7F1003E5901 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		7A3411112B6EBA24003E5901 /* ClockAlarm+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClockAlarm+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7A3411122B6EBA24003E5901 /* ClockAlarm+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClockAlarm+CoreDataProperties.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A3410E02B6EB53C003E5901 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7A3410DA2B6EB53C003E5901 = {
+			isa = PBXGroup;
+			children = (
+				7A3410E52B6EB53C003E5901 /* SmartAlarmClock */,
+				7A3410E42B6EB53C003E5901 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7A3410E42B6EB53C003E5901 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A3410E32B6EB53C003E5901 /* SmartAlarmClock.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A3410E52B6EB53C003E5901 /* SmartAlarmClock */ = {
+			isa = PBXGroup;
+			children = (
+				7A3411092B6EB78E003E5901 /* Services */,
+				7A3411022B6EB6A3003E5901 /* Models */,
+				7A3411012B6EB633003E5901 /* Controlers */,
+				7A3410FD2B6EB552003E5901 /* Resources */,
+				7A3410F72B6EB53E003E5901 /* Info.plist */,
+			);
+			path = SmartAlarmClock;
+			sourceTree = "<group>";
+		};
+		7A3410FD2B6EB552003E5901 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7A3411002B6EB5F9003E5901 /* Assets */,
+				7A3410FF2B6EB5C6003E5901 /* Main */,
+				7A3410FE2B6EB578003E5901 /* Launch */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7A3410FE2B6EB578003E5901 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				7A3410EC2B6EB53C003E5901 /* Main.storyboard */,
+				7A3410F42B6EB53E003E5901 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		7A3410FF2B6EB5C6003E5901 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7A3410E82B6EB53C003E5901 /* SceneDelegate.swift */,
+				7A3410E62B6EB53C003E5901 /* AppDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7A3411002B6EB5F9003E5901 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				7A3410F22B6EB53E003E5901 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		7A3411012B6EB633003E5901 /* Controlers */ = {
+			isa = PBXGroup;
+			children = (
+				7A3410EA2B6EB53C003E5901 /* ViewController.swift */,
+			);
+			path = Controlers;
+			sourceTree = "<group>";
+		};
+		7A3411022B6EB6A3003E5901 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7A3411052B6EB723003E5901 /* Alarm.swift */,
+				7A3411072B6EB72D003E5901 /* Scanner.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7A3411092B6EB78E003E5901 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7A34110A2B6EB7B0003E5901 /* CoreData */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7A34110A2B6EB7B0003E5901 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7A3410EF2B6EB53C003E5901 /* SmartAlarmClock.xcdatamodeld */,
+				7A3411112B6EBA24003E5901 /* ClockAlarm+CoreDataClass.swift */,
+				7A3411122B6EBA24003E5901 /* ClockAlarm+CoreDataProperties.swift */,
+				7A34110B2B6EB7F1003E5901 /* Manager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7A3410E22B6EB53C003E5901 /* SmartAlarmClock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A3410FA2B6EB53E003E5901 /* Build configuration list for PBXNativeTarget "SmartAlarmClock" */;
+			buildPhases = (
+				7A3410DF2B6EB53C003E5901 /* Sources */,
+				7A3410E02B6EB53C003E5901 /* Frameworks */,
+				7A3410E12B6EB53C003E5901 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartAlarmClock;
+			productName = SmartAlarmClock;
+			productReference = 7A3410E32B6EB53C003E5901 /* SmartAlarmClock.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A3410DB2B6EB53C003E5901 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					7A3410E22B6EB53C003E5901 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 7A3410DE2B6EB53C003E5901 /* Build configuration list for PBXProject "SmartAlarmClock" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7A3410DA2B6EB53C003E5901;
+			productRefGroup = 7A3410E42B6EB53C003E5901 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A3410E22B6EB53C003E5901 /* SmartAlarmClock */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A3410E12B6EB53C003E5901 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A3410F62B6EB53E003E5901 /* LaunchScreen.storyboard in Resources */,
+				7A3410F32B6EB53E003E5901 /* Assets.xcassets in Resources */,
+				7A3410EE2B6EB53C003E5901 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A3410DF2B6EB53C003E5901 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A3410F12B6EB53C003E5901 /* SmartAlarmClock.xcdatamodeld in Sources */,
+				7A3410EB2B6EB53C003E5901 /* ViewController.swift in Sources */,
+				7A3411062B6EB723003E5901 /* Alarm.swift in Sources */,
+				7A3411142B6EBA24003E5901 /* ClockAlarm+CoreDataProperties.swift in Sources */,
+				7A3410E72B6EB53C003E5901 /* AppDelegate.swift in Sources */,
+				7A34110C2B6EB7F1003E5901 /* Manager.swift in Sources */,
+				7A3411082B6EB72D003E5901 /* Scanner.swift in Sources */,
+				7A3411132B6EBA24003E5901 /* ClockAlarm+CoreDataClass.swift in Sources */,
+				7A3410E92B6EB53C003E5901 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7A3410EC2B6EB53C003E5901 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A3410ED2B6EB53C003E5901 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7A3410F42B6EB53E003E5901 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A3410F52B6EB53E003E5901 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7A3410F82B6EB53E003E5901 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7A3410F92B6EB53E003E5901 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7A3410FB2B6EB53E003E5901 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SmartAlarmClock/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.SmartAlarmClock";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7A3410FC2B6EB53E003E5901 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SmartAlarmClock/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.SmartAlarmClock";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A3410DE2B6EB53C003E5901 /* Build configuration list for PBXProject "SmartAlarmClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A3410F82B6EB53E003E5901 /* Debug */,
+				7A3410F92B6EB53E003E5901 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A3410FA2B6EB53E003E5901 /* Build configuration list for PBXNativeTarget "SmartAlarmClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A3410FB2B6EB53E003E5901 /* Debug */,
+				7A3410FC2B6EB53E003E5901 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7A3410EF2B6EB53C003E5901 /* SmartAlarmClock.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7A3410F02B6EB53C003E5901 /* SmartAlarmClock.xcdatamodel */,
+			);
+			currentVersion = 7A3410F02B6EB53C003E5901 /* SmartAlarmClock.xcdatamodel */;
+			path = SmartAlarmClock.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7A3410DB2B6EB53C003E5901 /* Project object */;
+}
