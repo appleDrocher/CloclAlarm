@@ -20,6 +20,7 @@
 		7A3411132B6EBA24003E5901 /* ClockAlarm+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3411112B6EBA24003E5901 /* ClockAlarm+CoreDataClass.swift */; };
 		7A3411142B6EBA24003E5901 /* ClockAlarm+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3411122B6EBA24003E5901 /* ClockAlarm+CoreDataProperties.swift */; };
 		7A3411172B6ECFC9003E5901 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3411162B6ECFC9003E5901 /* Manager.swift */; };
+		7A34111A2B6F0648003E5901 /* ManagerDateFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3411192B6F0648003E5901 /* ManagerDateFormatting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		7A3411112B6EBA24003E5901 /* ClockAlarm+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClockAlarm+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7A3411122B6EBA24003E5901 /* ClockAlarm+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClockAlarm+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7A3411162B6ECFC9003E5901 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		7A3411192B6F0648003E5901 /* ManagerDateFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerDateFormatting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		7A3411092B6EB78E003E5901 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				7A3411182B6F058D003E5901 /* DateFormatting */,
 				7A3411152B6ECFAA003E5901 /* UserDefaults */,
 				7A34110A2B6EB7B0003E5901 /* CoreData */,
 			);
@@ -158,6 +161,14 @@
 				7A3411162B6ECFC9003E5901 /* Manager.swift */,
 			);
 			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		7A3411182B6F058D003E5901 /* DateFormatting */ = {
+			isa = PBXGroup;
+			children = (
+				7A3411192B6F0648003E5901 /* ManagerDateFormatting.swift */,
+			);
+			path = DateFormatting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +252,7 @@
 				7A3411132B6EBA24003E5901 /* ClockAlarm+CoreDataClass.swift in Sources */,
 				7A3410E92B6EB53C003E5901 /* SceneDelegate.swift in Sources */,
 				7A3411172B6ECFC9003E5901 /* Manager.swift in Sources */,
+				7A34111A2B6F0648003E5901 /* ManagerDateFormatting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
