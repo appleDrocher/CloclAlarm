@@ -6,7 +6,7 @@ protocol ManagerServiceProtocol {
     var didUpdate: () -> Void { get set }
     func saveContext()
     func fetchAllNotes()
-    func addNewNote()
+    func addNewAlarm()
 }
 
 final class CoreManager: ManagerServiceProtocol {
@@ -62,7 +62,7 @@ final class CoreManager: ManagerServiceProtocol {
         }
     }
     
-    func addNewNote(){
+    func addNewAlarm(){
         let note = ClockAlarm(context: persistentContainer.viewContext)
         
         saveContext()
