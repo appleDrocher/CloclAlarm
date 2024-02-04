@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "constraints",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/cacich0/Constraints",
+      "state" : {
+        "branch" : "main",
+        "revision" : "6ceb94ddffd1b36caa0b38b83ebf96137a0a1a4c"
+      }
+    }
+  ],
+  "version" : 2
+}
