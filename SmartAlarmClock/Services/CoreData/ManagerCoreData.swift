@@ -30,7 +30,7 @@ final class CoreManager: ManagerServiceProtocol {
     
     lazy var persistentContainer: NSPersistentContainer = {
         
-        let container = NSPersistentContainer(name: "_5minApp")
+        let container = NSPersistentContainer(name: "SmartAlarmClock")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 

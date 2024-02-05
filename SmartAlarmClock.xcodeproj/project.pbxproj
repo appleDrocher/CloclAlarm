@@ -24,6 +24,7 @@
 		7A34111D2B7024D7003E5901 /* ManagerSettingAlarmEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A34111C2B7024D7003E5901 /* ManagerSettingAlarmEvent.swift */; };
 		7A3411202B702BF6003E5901 /* testSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7A34111E2B702A0D003E5901 /* testSound.mp3 */; };
 		7A3411252B703781003E5901 /* Constraints in Frameworks */ = {isa = PBXBuildFile; productRef = 7A3411242B703781003E5901 /* Constraints */; };
+		7A34112B2B708964003E5901 /* testSoundCaf.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7A34112A2B708964003E5901 /* testSoundCaf.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +45,8 @@
 		7A3411192B6F0648003E5901 /* ManagerDataFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerDataFormatting.swift; sourceTree = "<group>"; };
 		7A34111C2B7024D7003E5901 /* ManagerSettingAlarmEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerSettingAlarmEvent.swift; sourceTree = "<group>"; };
 		7A34111E2B702A0D003E5901 /* testSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = testSound.mp3; sourceTree = "<group>"; };
-		7A3411262B706708003E5901 /* SmartAlarmClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SmartAlarmClock.app; path = "/Users/levon_555/Desktop/CloclAlarm/build/Debug-iphoneos/SmartAlarmClock.app"; sourceTree = "<absolute>"; };
+		7A3411292B7088AB003E5901 /* SmartAlarmClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SmartAlarmClock.app; path = "/Users/levon_555/Desktop/CloclAlarm/build/Debug-iphoneos/SmartAlarmClock.app"; sourceTree = "<absolute>"; };
+		7A34112A2B708964003E5901 /* testSoundCaf.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = testSoundCaf.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		7A3410E52B6EB53C003E5901 /* SmartAlarmClock */ = {
 			isa = PBXGroup;
 			children = (
+				7A34112C2B70A0DD003E5901 /* Componets */,
 				7A3411092B6EB78E003E5901 /* Services */,
 				7A3411022B6EB6A3003E5901 /* Models */,
 				7A3411012B6EB633003E5901 /* Controlers */,
@@ -181,9 +184,17 @@
 		7A3411212B702FFD003E5901 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				7A34112A2B708964003E5901 /* testSoundCaf.caf */,
 				7A34111E2B702A0D003E5901 /* testSound.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		7A34112C2B70A0DD003E5901 /* Componets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Componets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,7 +217,7 @@
 				7A3411242B703781003E5901 /* Constraints */,
 			);
 			productName = SmartAlarmClock;
-			productReference = 7A3411262B706708003E5901 /* SmartAlarmClock.app */;
+			productReference = 7A3411292B7088AB003E5901 /* SmartAlarmClock.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -250,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A34112B2B708964003E5901 /* testSoundCaf.caf in Resources */,
 				7A3411202B702BF6003E5901 /* testSound.mp3 in Resources */,
 				7A3410F62B6EB53E003E5901 /* LaunchScreen.storyboard in Resources */,
 				7A3410F32B6EB53E003E5901 /* Assets.xcassets in Resources */,
@@ -424,7 +436,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SmartAlarmClock/Info.plist;
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Ваше описание использования микрофона";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Recording audio is necessary for playing music in the background.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -452,7 +464,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SmartAlarmClock/Info.plist;
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Ваше описание использования микрофона";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Recording audio is necessary for playing music in the background.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

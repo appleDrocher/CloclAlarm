@@ -18,8 +18,7 @@ class AlarmService: NSObject, AlarmServiceProtocol {
     override init() {
         super.init()
         notificationCenter.delegate = self
-        NotificationCenter.default.addObserver(self, selector: #selector(handleInterruption), name: AVAudioSession.interruptionNotification, object: nil)
-        
+       
     }
     
     func setAlarm(date: Date) {
@@ -48,23 +47,24 @@ class AlarmService: NSObject, AlarmServiceProtocol {
     }
     
     func playAlarmSound() {
-        guard let soundURL = Bundle.main.url(forResource: "testSound", withExtension: "mp3") else {
+        guard let soundURL = Bundle.main.url(forResource: "testSoundCaf", withExtension: "caf") else {
             print("Не удалось найти звуковой файл будильника")
             return
         }
         
         do {
-            try AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
-            try AVAudioSession.sharedInstance().setCategory(.playback, options: .mixWithOthers)
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-            audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
-            audioPlayer?.play()
-        } catch {
-            print("Ошибка при проигрывании звукового файла: \(error.localizedDescription)")
+                try AVAudioSession.sharedInstance().setCategory(.playback, options: .mixWithOthers)
+                try AVAudioSession.sharedInstance().setActive(true)
+                
+                // Добавьте эту строку для фонового воспроизведения аудио
+                UIApplication.shared.beginBackgroundTask(withName: "AlarmBackgroundTask", expirationHandler: nil)
+                
+                audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+                audioPlayer?.play()
+            } catch {
+                print("Ошибка при проигрывании звукового файла: \(error.localizedDescription)")
+            }
         }
-    }
-    
     func stopAlarmSound() {
         audioPlayer?.stop()
         audioPlayer = nil
@@ -76,44 +76,5 @@ class AlarmService: NSObject, AlarmServiceProtocol {
         }
     }
     
-    @objc func handleInterruption(notification: Notification) {
-        guard let info = notification.userInfo,
-              let typeValue = info[AVAudioSessionInterruptionTypeKey] as? UInt,
-              let type = AVAudioSession.InterruptionType(rawValue: typeValue) else {
-            return
-        }
-        
-        switch type {
-        case .began:
-            // Прерывание началось, остановите воспроизведение
-            stopAlarmSound()
-        case .ended:
-            // Прерывание закончилось, возобновите воспроизведение
-            if let optionsValue = info[AVAudioSessionInterruptionOptionKey] as? UInt {
-                let options = AVAudioSession.InterruptionOptions(rawValue: optionsValue)
-                if options.contains(.shouldResume) {
-                    playAlarmSound()
-                }
-            }
-        default: ()
-        }
-    }
-    
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        if response.notification.request.identifier == "AlarmNotification" {
-            stopAlarmSound()
-        }
-        
-        completionHandler()
-    }
-    
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        if notification.request.identifier == "AlarmNotification" {
-            playAlarmSound()
-        }
-        
-        let presentationOptions: UNNotificationPresentationOptions = [.alert, .sound]
-        completionHandler(presentationOptions)
-    }
 }
 
