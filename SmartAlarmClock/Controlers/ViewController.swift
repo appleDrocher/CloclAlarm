@@ -8,22 +8,52 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
-    
+        view.backgroundColor = .white
+        
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .dateAndTime
         datePicker.addTarget(self, action: #selector(datePickerValueChanged), for: .valueChanged)
         
+        let button1 = CreateButton()
+        
+        let button2 = SaveButton()
+        
+        let button3 = ScanButton()
+       
         view.addSubview(content)
         content.addSubview(datePicker)
+        content.addSubview(button1)
+        content.addSubview(button2)
+        content.addSubview(button3)
         
         content.layout
             .box(in: view)
             .activate()
         
         datePicker.layout
+            .top(250)
             .centerX()
-            .centerY()
+            .activate()
+        
+        button1.layout
+            .leading(28)
+            .trailing(28)
+            .height(80)
+            .top(600)
+            .activate()
+        
+        button2.layout
+            .leading(28)
+            .trailing(28)
+            .height(80)
+            .top(500)
+            .activate()
+        
+        button3.layout
+            .leading(28)
+            .trailing(28)
+            .height(80)
+            .top(400)
             .activate()
         
     }
@@ -31,9 +61,6 @@ class ViewController: UIViewController {
     @objc func datePickerValueChanged(_ sender: UIDatePicker) {
         let selectedDate = sender.date
         alarmService.setAlarm(date: selectedDate)
-        
-        let timer = Timer(fireAt: selectedDate, interval: 0, target: self, selector: #selector(playAlarmSound), userInfo: nil, repeats: false)
-        RunLoop.main.add(timer, forMode: .common)
     }
     
     @objc func playAlarmSound() {

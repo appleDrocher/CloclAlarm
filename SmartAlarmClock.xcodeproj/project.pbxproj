@@ -22,9 +22,12 @@
 		7A3411172B6ECFC9003E5901 /* ManagerUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3411162B6ECFC9003E5901 /* ManagerUserDefaults.swift */; };
 		7A34111A2B6F0648003E5901 /* ManagerDataFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3411192B6F0648003E5901 /* ManagerDataFormatting.swift */; };
 		7A34111D2B7024D7003E5901 /* ManagerSettingAlarmEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A34111C2B7024D7003E5901 /* ManagerSettingAlarmEvent.swift */; };
-		7A3411202B702BF6003E5901 /* testSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7A34111E2B702A0D003E5901 /* testSound.mp3 */; };
 		7A3411252B703781003E5901 /* Constraints in Frameworks */ = {isa = PBXBuildFile; productRef = 7A3411242B703781003E5901 /* Constraints */; };
 		7A34112B2B708964003E5901 /* testSoundCaf.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7A34112A2B708964003E5901 /* testSoundCaf.caf */; };
+		7A34112E2B70A2B0003E5901 /* Radar-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7A34112D2B70A2B0003E5901 /* Radar-1.mp3 */; };
+		7A3411322B70B913003E5901 /* SaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3411312B70B913003E5901 /* SaveButton.swift */; };
+		7A3411342B70C76E003E5901 /* CreateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3411332B70C76E003E5901 /* CreateButton.swift */; };
+		7A3411382B70D2C2003E5901 /* ScanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3411372B70D2C2003E5901 /* ScanButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,9 +47,12 @@
 		7A3411162B6ECFC9003E5901 /* ManagerUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerUserDefaults.swift; sourceTree = "<group>"; };
 		7A3411192B6F0648003E5901 /* ManagerDataFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerDataFormatting.swift; sourceTree = "<group>"; };
 		7A34111C2B7024D7003E5901 /* ManagerSettingAlarmEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerSettingAlarmEvent.swift; sourceTree = "<group>"; };
-		7A34111E2B702A0D003E5901 /* testSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = testSound.mp3; sourceTree = "<group>"; };
-		7A3411292B7088AB003E5901 /* SmartAlarmClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SmartAlarmClock.app; path = "/Users/levon_555/Desktop/CloclAlarm/build/Debug-iphoneos/SmartAlarmClock.app"; sourceTree = "<absolute>"; };
 		7A34112A2B708964003E5901 /* testSoundCaf.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = testSoundCaf.caf; sourceTree = "<group>"; };
+		7A34112D2B70A2B0003E5901 /* Radar-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Radar-1.mp3"; sourceTree = "<group>"; };
+		7A34112F2B70B4A9003E5901 /* SmartAlarmClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SmartAlarmClock.app; path = "/Users/levon_555/Desktop/CloclAlarm/build/Debug-iphoneos/SmartAlarmClock.app"; sourceTree = "<absolute>"; };
+		7A3411312B70B913003E5901 /* SaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButton.swift; sourceTree = "<group>"; };
+		7A3411332B70C76E003E5901 /* CreateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateButton.swift; sourceTree = "<group>"; };
+		7A3411372B70D2C2003E5901 /* ScanButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,8 +190,8 @@
 		7A3411212B702FFD003E5901 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				7A34112D2B70A2B0003E5901 /* Radar-1.mp3 */,
 				7A34112A2B708964003E5901 /* testSoundCaf.caf */,
-				7A34111E2B702A0D003E5901 /* testSound.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -193,8 +199,19 @@
 		7A34112C2B70A0DD003E5901 /* Componets */ = {
 			isa = PBXGroup;
 			children = (
+				7A3411302B70B8D8003E5901 /* Buttons */,
 			);
 			path = Componets;
+			sourceTree = "<group>";
+		};
+		7A3411302B70B8D8003E5901 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				7A3411312B70B913003E5901 /* SaveButton.swift */,
+				7A3411332B70C76E003E5901 /* CreateButton.swift */,
+				7A3411372B70D2C2003E5901 /* ScanButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,7 +234,7 @@
 				7A3411242B703781003E5901 /* Constraints */,
 			);
 			productName = SmartAlarmClock;
-			productReference = 7A3411292B7088AB003E5901 /* SmartAlarmClock.app */;
+			productReference = 7A34112F2B70B4A9003E5901 /* SmartAlarmClock.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -262,8 +279,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A34112B2B708964003E5901 /* testSoundCaf.caf in Resources */,
-				7A3411202B702BF6003E5901 /* testSound.mp3 in Resources */,
 				7A3410F62B6EB53E003E5901 /* LaunchScreen.storyboard in Resources */,
+				7A34112E2B70A2B0003E5901 /* Radar-1.mp3 in Resources */,
 				7A3410F32B6EB53E003E5901 /* Assets.xcassets in Resources */,
 				7A3410EE2B6EB53C003E5901 /* Main.storyboard in Resources */,
 			);
@@ -282,9 +299,12 @@
 				7A3411142B6EBA24003E5901 /* ClockAlarm+CoreDataProperties.swift in Sources */,
 				7A3410E72B6EB53C003E5901 /* AppDelegate.swift in Sources */,
 				7A34110C2B6EB7F1003E5901 /* ManagerCoreData.swift in Sources */,
+				7A3411322B70B913003E5901 /* SaveButton.swift in Sources */,
 				7A3411082B6EB72D003E5901 /* Scanner.swift in Sources */,
 				7A34111D2B7024D7003E5901 /* ManagerSettingAlarmEvent.swift in Sources */,
 				7A3411132B6EBA24003E5901 /* ClockAlarm+CoreDataClass.swift in Sources */,
+				7A3411382B70D2C2003E5901 /* ScanButton.swift in Sources */,
+				7A3411342B70C76E003E5901 /* CreateButton.swift in Sources */,
 				7A3410E92B6EB53C003E5901 /* SceneDelegate.swift in Sources */,
 				7A3411172B6ECFC9003E5901 /* ManagerUserDefaults.swift in Sources */,
 				7A34111A2B6F0648003E5901 /* ManagerDataFormatting.swift in Sources */,
@@ -442,6 +462,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,6 +491,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

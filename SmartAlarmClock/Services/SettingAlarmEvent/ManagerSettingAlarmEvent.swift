@@ -47,7 +47,7 @@ class AlarmService: NSObject, AlarmServiceProtocol {
     }
     
     func playAlarmSound() {
-        guard let soundURL = Bundle.main.url(forResource: "testSoundCaf", withExtension: "caf") else {
+        guard let soundURL = Bundle.main.url(forResource: "Radar-1", withExtension: "mp3") else {
             print("Не удалось найти звуковой файл будильника")
             return
         }
@@ -56,9 +56,13 @@ class AlarmService: NSObject, AlarmServiceProtocol {
                 try AVAudioSession.sharedInstance().setCategory(.playback, options: .mixWithOthers)
                 try AVAudioSession.sharedInstance().setActive(true)
                 
-                // Добавьте эту строку для фонового воспроизведения аудио
-                UIApplication.shared.beginBackgroundTask(withName: "AlarmBackgroundTask", expirationHandler: nil)
-                
+            var backgroundTaskIdentifier: UIBackgroundTaskIdentifier = .invalid
+                  
+                  backgroundTaskIdentifier = UIApplication.shared.beginBackgroundTask(withName: "AlarmBackgroundTask") {
+                    
+                      UIApplication.shared.endBackgroundTask(backgroundTaskIdentifier)
+                  }
+                  
                 audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
                 audioPlayer?.play()
             } catch {
