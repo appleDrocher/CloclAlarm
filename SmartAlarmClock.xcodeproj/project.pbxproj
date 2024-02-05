@@ -22,12 +22,11 @@
 		7A3411172B6ECFC9003E5901 /* ManagerUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3411162B6ECFC9003E5901 /* ManagerUserDefaults.swift */; };
 		7A34111A2B6F0648003E5901 /* ManagerDataFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3411192B6F0648003E5901 /* ManagerDataFormatting.swift */; };
 		7A34111D2B7024D7003E5901 /* ManagerSettingAlarmEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A34111C2B7024D7003E5901 /* ManagerSettingAlarmEvent.swift */; };
-		7A3411202B702BF6003E5901 /* E.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7A34111E2B702A0D003E5901 /* E.mp3 */; };
+		7A3411202B702BF6003E5901 /* testSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7A34111E2B702A0D003E5901 /* testSound.mp3 */; };
 		7A3411252B703781003E5901 /* Constraints in Frameworks */ = {isa = PBXBuildFile; productRef = 7A3411242B703781003E5901 /* Constraints */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7A3410E32B6EB53C003E5901 /* SmartAlarmClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SmartAlarmClock.app; path = "/Users/levon_555/Desktop/CloclAlarm/build/Debug-iphoneos/SmartAlarmClock.app"; sourceTree = "<absolute>"; };
 		7A3410E62B6EB53C003E5901 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A3410E82B6EB53C003E5901 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7A3410EA2B6EB53C003E5901 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,7 +43,8 @@
 		7A3411162B6ECFC9003E5901 /* ManagerUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerUserDefaults.swift; sourceTree = "<group>"; };
 		7A3411192B6F0648003E5901 /* ManagerDataFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerDataFormatting.swift; sourceTree = "<group>"; };
 		7A34111C2B7024D7003E5901 /* ManagerSettingAlarmEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerSettingAlarmEvent.swift; sourceTree = "<group>"; };
-		7A34111E2B702A0D003E5901 /* E.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = E.mp3; sourceTree = "<group>"; };
+		7A34111E2B702A0D003E5901 /* testSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = testSound.mp3; sourceTree = "<group>"; };
+		7A3411262B706708003E5901 /* SmartAlarmClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SmartAlarmClock.app; path = "/Users/levon_555/Desktop/CloclAlarm/build/Debug-iphoneos/SmartAlarmClock.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +181,7 @@
 		7A3411212B702FFD003E5901 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				7A34111E2B702A0D003E5901 /* E.mp3 */,
+				7A34111E2B702A0D003E5901 /* testSound.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -206,7 +206,7 @@
 				7A3411242B703781003E5901 /* Constraints */,
 			);
 			productName = SmartAlarmClock;
-			productReference = 7A3410E32B6EB53C003E5901 /* SmartAlarmClock.app */;
+			productReference = 7A3411262B706708003E5901 /* SmartAlarmClock.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -250,7 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A3411202B702BF6003E5901 /* E.mp3 in Resources */,
+				7A3411202B702BF6003E5901 /* testSound.mp3 in Resources */,
 				7A3410F62B6EB53E003E5901 /* LaunchScreen.storyboard in Resources */,
 				7A3410F32B6EB53E003E5901 /* Assets.xcassets in Resources */,
 				7A3410EE2B6EB53C003E5901 /* Main.storyboard in Resources */,
@@ -424,6 +424,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SmartAlarmClock/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Ваше описание использования микрофона";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -451,6 +452,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SmartAlarmClock/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Ваше описание использования микрофона";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

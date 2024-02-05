@@ -9,7 +9,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
-        
+    
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .dateAndTime
         datePicker.addTarget(self, action: #selector(datePickerValueChanged), for: .valueChanged)

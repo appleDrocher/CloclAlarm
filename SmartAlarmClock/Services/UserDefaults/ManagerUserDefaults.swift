@@ -1,24 +1,24 @@
 import Foundation
 
-protocol UserDefaultsManaging {
-    func saveValue(_ value: Any, forKey key: String)
-    func getValue(forKey key: String) -> Any?
+protocol UserDefaultsServiceProtocol {
+    func saveValue<T>(_ value: T, forKey key: String)
+    func getValue<T>(forKey key: String) -> T?
     func removeValue(forKey key: String)
     func clearAllValues()
 }
 
-class UserDefaultsManager: UserDefaultsManaging {
+class UserDefaultsService: UserDefaultsServiceProtocol {
     
-    static let shared: UserDefaultsManaging = UserDefaultsManager()
+    static let shared: UserDefaultsServiceProtocol = UserDefaultsService()
     
     private let defaults = UserDefaults.standard
     
-    func saveValue(_ value: Any, forKey key: String) {
+    func saveValue<T>(_ value: T, forKey key: String) {
         defaults.set(value, forKey: key)
     }
     
-    func getValue(forKey key: String) -> Any? {
-        return defaults.value(forKey: key)
+    func getValue<T>(forKey key: String) -> T? {
+        return defaults.value(forKey: key) as? T
     }
     
     func removeValue(forKey key: String) {

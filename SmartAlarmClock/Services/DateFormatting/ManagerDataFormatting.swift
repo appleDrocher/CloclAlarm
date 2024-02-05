@@ -1,12 +1,12 @@
 import Foundation
 
-protocol DateService {
+protocol DateConverterServiceProtocol {
     func dayOfWeek(for date: Date) -> String
 }
 
-class DateConverterService: DateService {
+class DateConverterService: DateConverterServiceProtocol {
     
-    static let shared: DateService = DateConverterService()
+    static let shared: DateConverterServiceProtocol = DateConverterService()
     
     private let dateFormatter: DateFormatter
     

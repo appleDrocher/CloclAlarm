@@ -7,17 +7,58 @@
 
 import UIKit
 import CoreData
+import AVFoundation
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Регистрируем уведомления
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            if granted {
+                print("Разрешение на уведомления получено")
+            } else {
+                print("Разрешение на уведомления не получено")
+            }
+        }
+        
+        // Устанавливаем делегата для уведомлений
+        do {
+            try AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [])
+            try AVAudioSession.sharedInstance().setActive(true)
+       
+        } catch {
+            print("Setting category to AVAudioSessionCategoryPlayback failed.")
+        }
+       
+        
+       
+        
+        
+        
+        func requestMicrophonePermission() {
+            AVAudioSession.sharedInstance().requestRecordPermission { (granted) in
+                if granted {
+                    print("Доступ к микрофону разрешен")
+                } else {
+                    print("Доступ к микрофону запрещен")
+                }
+            }
+            
+        }
+        
         return true
+   
     }
-
+  
+    
+   
+    
+    
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

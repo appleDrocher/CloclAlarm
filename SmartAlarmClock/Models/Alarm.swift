@@ -8,20 +8,22 @@ struct Alarm {
     let sound: Sound
 }
 
-enum Weekday: String {
-    case monday = "Пн"
-    case tuesday = "Вт"
-    case wednesday = "Ср"
-    case thursday = "Чт"
-    case friday = "Пт"
-    case saturday = "Сб"
-    case sunday = "Вс"
-    case other = "Без повтора"
+
+extension Alarm {
+    
+    enum Weekday: String {
+        case monday = "Пн"
+        case tuesday = "Вт"
+        case wednesday = "Ср"
+        case thursday = "Чт"
+        case friday = "Пт"
+        case saturday = "Сб"
+        case sunday = "Вс"
+        case other = "Без повтора"
+    }
+        struct Sound {
+            let name: String
+            let fileURL: URL
+    }
+        
 }
-
-struct Sound {
-    let name: String
-    let fileURL: URL
-}
-
-
