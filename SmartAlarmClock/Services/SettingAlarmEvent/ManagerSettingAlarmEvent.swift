@@ -18,57 +18,98 @@ class AlarmService: NSObject, AlarmServiceProtocol {
     override init() {
         super.init()
         notificationCenter.delegate = self
-       
     }
     
     func setAlarm(date: Date) {
         notificationCenter.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
             if granted {
                 let content = UNMutableNotificationContent()
-                content.title = "Будильник"
-                content.body = "Пора проснуться!"
+                content.title = "Alarm"
+                content.body = "Wake up!"
                 content.sound = UNNotificationSound.default
-                content.categoryIdentifier = "AlarmCategory"
                 
-                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: date.timeIntervalSinceNow, repeats: false)
+                let calendar = Calendar.current
+                let components = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+                let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
                 let request = UNNotificationRequest(identifier: "AlarmNotification", content: content, trigger: trigger)
                 
                 self.notificationCenter.add(request) { error in
                     if let error = error {
-                        print("Ошибка при установке будильника: \(error.localizedDescription)")
+                        print("Error setting alarm: \(error.localizedDescription)")
                     } else {
-                        print("Будильник успешно установлен на \(date)")
+                        print("Alarm set successfully")
+                    }
+                }
+                
+                // Schedule multiple notifications with a 5-second delay between each
+                let repeatCount = 10 // Number of repetitions
+                
+                for i in 1...repeatCount {
+                    let repeatContent = UNMutableNotificationContent()
+                    repeatContent.title = "Alarm"
+                    repeatContent.body = "Wake up!"
+                    repeatContent.sound = UNNotificationSound.default
+                    
+                    let triggerDate = date.addingTimeInterval(TimeInterval(i * 5))
+                    let repeatTrigger = UNCalendarNotificationTrigger(dateMatching: calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: triggerDate), repeats: false)
+                    
+                    let repeatRequest = UNNotificationRequest(identifier: "RepeatAlarmNotification\(i)", content: repeatContent, trigger: repeatTrigger)
+                    
+                    self.notificationCenter.add(repeatRequest) { error in
+                        if let error = error {
+                            print("Error setting repeating alarm: \(error.localizedDescription)")
+                        } else {
+                            print("Repeating alarm \(i) set successfully")
+                        }
                     }
                 }
             } else if let error = error {
-                print("Ошибка при запросе разрешения на уведомления: \(error.localizedDescription)")
+                print("Error requesting notification authorization: \(error.localizedDescription)")
             }
         }
     }
     
     func playAlarmSound() {
         guard let soundURL = Bundle.main.url(forResource: "Radar-1", withExtension: "mp3") else {
-            print("Не удалось найти звуковой файл будильника")
+            print("Failed to find alarm sound file")
             return
         }
         
         do {
-                try AVAudioSession.sharedInstance().setCategory(.playback, options: .mixWithOthers)
-                try AVAudioSession.sharedInstance().setActive(true)
-                
+            try AVAudioSession.sharedInstance().setCategory(.playback, options: .mixWithOthers)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
             var backgroundTaskIdentifier: UIBackgroundTaskIdentifier = .invalid
-                  
-                  backgroundTaskIdentifier = UIApplication.shared.beginBackgroundTask(withName: "AlarmBackgroundTask") {
-                    
-                      UIApplication.shared.endBackgroundTask(backgroundTaskIdentifier)
-                  }
-                  
-                audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
-                audioPlayer?.play()
-            } catch {
-                print("Ошибка при проигрывании звукового файла: \(error.localizedDescription)")
+            
+            backgroundTaskIdentifier = UIApplication.shared.beginBackgroundTask(withName: "AlarmBackgroundTask") {
+                // This code will be executed when the background task time expires
+                UIApplication.shared.endBackgroundTask(backgroundTaskIdentifier)
             }
+            
+            audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+            audioPlayer?.play()
+        } catch {
+            print("Error playing alarm sound: \(error.localizedDescription)")
         }
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        if notification.request.identifier == "AlarmNotification" {
+            playAlarmSound()
+        }
+        completionHandler([.sound, .alert])
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
+        notificationCenter.removeAllPendingNotificationRequests()
+        stopAlarmSound()
+        completionHandler()
+    }
+    
     func stopAlarmSound() {
         audioPlayer?.stop()
         audioPlayer = nil
@@ -76,9 +117,7 @@ class AlarmService: NSObject, AlarmServiceProtocol {
         do {
             try AVAudioSession.sharedInstance().setActive(false)
         } catch {
-            print("Ошибка при остановке звукового файла: \(error.localizedDescription)")
+            print("Error stopping alarm sound: \(error.localizedDescription)")
         }
     }
-    
 }
-

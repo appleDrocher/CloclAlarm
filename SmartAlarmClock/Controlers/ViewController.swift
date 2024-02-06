@@ -13,13 +13,14 @@ class ViewController: UIViewController {
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .dateAndTime
         datePicker.addTarget(self, action: #selector(datePickerValueChanged), for: .valueChanged)
-        
+        UNUserNotificationCenter.current().delegate = alarmService
+      
         let button1 = CreateButton()
         
         let button2 = SaveButton()
         
         let button3 = ScanButton()
-       
+        
         view.addSubview(content)
         content.addSubview(datePicker)
         content.addSubview(button1)
@@ -56,14 +57,14 @@ class ViewController: UIViewController {
             .top(400)
             .activate()
         
-    }
         
+        
+    }
+    
     @objc func datePickerValueChanged(_ sender: UIDatePicker) {
         let selectedDate = sender.date
         alarmService.setAlarm(date: selectedDate)
     }
-    
-    @objc func playAlarmSound() {
-        alarmService.playAlarmSound()
-    }
+
 }
+

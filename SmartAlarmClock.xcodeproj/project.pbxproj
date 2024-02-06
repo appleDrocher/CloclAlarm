@@ -199,6 +199,7 @@
 		7A34112C2B70A0DD003E5901 /* Componets */ = {
 			isa = PBXGroup;
 			children = (
+				7A3411392B71B268003E5901 /* NavigationBar */,
 				7A3411302B70B8D8003E5901 /* Buttons */,
 			);
 			path = Componets;
@@ -212,6 +213,13 @@
 				7A3411372B70D2C2003E5901 /* ScanButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		7A3411392B71B268003E5901 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NavigationBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
