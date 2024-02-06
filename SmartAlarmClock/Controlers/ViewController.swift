@@ -20,12 +20,13 @@ class ViewController: UIViewController {
         let button2 = SaveButton()
         
         let button3 = ScanButton()
-        
+      
         view.addSubview(content)
         content.addSubview(datePicker)
         content.addSubview(button1)
         content.addSubview(button2)
         content.addSubview(button3)
+      
         
         content.layout
             .box(in: view)
@@ -57,14 +58,12 @@ class ViewController: UIViewController {
             .top(400)
             .activate()
         
-        
-        
     }
     
     @objc func datePickerValueChanged(_ sender: UIDatePicker) {
         let selectedDate = sender.date
         alarmService.setAlarm(date: selectedDate)
     }
-
+    
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A264AE12B72E0C000A6825B /* Euphoria.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7A264AE02B72E0C000A6825B /* Euphoria.mp3 */; };
 		7A3410E72B6EB53C003E5901 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3410E62B6EB53C003E5901 /* AppDelegate.swift */; };
 		7A3410E92B6EB53C003E5901 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3410E82B6EB53C003E5901 /* SceneDelegate.swift */; };
 		7A3410EB2B6EB53C003E5901 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3410EA2B6EB53C003E5901 /* ViewController.swift */; };
@@ -31,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A264ADD2B72518300A6825B /* SmartAlarmClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartAlarmClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A264AE02B72E0C000A6825B /* Euphoria.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Euphoria.mp3; sourceTree = "<group>"; };
 		7A3410E62B6EB53C003E5901 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A3410E82B6EB53C003E5901 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7A3410EA2B6EB53C003E5901 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +52,6 @@
 		7A34111C2B7024D7003E5901 /* ManagerSettingAlarmEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerSettingAlarmEvent.swift; sourceTree = "<group>"; };
 		7A34112A2B708964003E5901 /* testSoundCaf.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = testSoundCaf.caf; sourceTree = "<group>"; };
 		7A34112D2B70A2B0003E5901 /* Radar-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Radar-1.mp3"; sourceTree = "<group>"; };
-		7A34112F2B70B4A9003E5901 /* SmartAlarmClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SmartAlarmClock.app; path = "/Users/levon_555/Desktop/CloclAlarm/build/Debug-iphoneos/SmartAlarmClock.app"; sourceTree = "<absolute>"; };
 		7A3411312B70B913003E5901 /* SaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButton.swift; sourceTree = "<group>"; };
 		7A3411332B70C76E003E5901 /* CreateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateButton.swift; sourceTree = "<group>"; };
 		7A3411372B70D2C2003E5901 /* ScanButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanButton.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				7A3410E52B6EB53C003E5901 /* SmartAlarmClock */,
+				7A264ADD2B72518300A6825B /* SmartAlarmClock.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -190,6 +193,7 @@
 		7A3411212B702FFD003E5901 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				7A264AE02B72E0C000A6825B /* Euphoria.mp3 */,
 				7A34112D2B70A2B0003E5901 /* Radar-1.mp3 */,
 				7A34112A2B708964003E5901 /* testSoundCaf.caf */,
 			);
@@ -199,7 +203,6 @@
 		7A34112C2B70A0DD003E5901 /* Componets */ = {
 			isa = PBXGroup;
 			children = (
-				7A3411392B71B268003E5901 /* NavigationBar */,
 				7A3411302B70B8D8003E5901 /* Buttons */,
 			);
 			path = Componets;
@@ -213,13 +216,6 @@
 				7A3411372B70D2C2003E5901 /* ScanButton.swift */,
 			);
 			path = Buttons;
-			sourceTree = "<group>";
-		};
-		7A3411392B71B268003E5901 /* NavigationBar */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NavigationBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,7 +238,7 @@
 				7A3411242B703781003E5901 /* Constraints */,
 			);
 			productName = SmartAlarmClock;
-			productReference = 7A34112F2B70B4A9003E5901 /* SmartAlarmClock.app */;
+			productReference = 7A264ADD2B72518300A6825B /* SmartAlarmClock.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -286,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A264AE12B72E0C000A6825B /* Euphoria.mp3 in Resources */,
 				7A34112B2B708964003E5901 /* testSoundCaf.caf in Resources */,
 				7A3410F62B6EB53E003E5901 /* LaunchScreen.storyboard in Resources */,
 				7A34112E2B70A2B0003E5901 /* Radar-1.mp3 in Resources */,
