@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		7A264AE12B72E0C000A6825B /* Euphoria.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7A264AE02B72E0C000A6825B /* Euphoria.mp3 */; };
+		7A264AE32B72EE3700A6825B /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A264AE22B72EE3700A6825B /* ScannerViewController.swift */; };
+		7A264AE52B72F73B00A6825B /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A264AE42B72F73B00A6825B /* CustomTabBarController.swift */; };
 		7A3410E72B6EB53C003E5901 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3410E62B6EB53C003E5901 /* AppDelegate.swift */; };
 		7A3410E92B6EB53C003E5901 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3410E82B6EB53C003E5901 /* SceneDelegate.swift */; };
-		7A3410EB2B6EB53C003E5901 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3410EA2B6EB53C003E5901 /* ViewController.swift */; };
+		7A3410EB2B6EB53C003E5901 /* CreateAlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3410EA2B6EB53C003E5901 /* CreateAlarmController.swift */; };
 		7A3410EE2B6EB53C003E5901 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A3410EC2B6EB53C003E5901 /* Main.storyboard */; };
 		7A3410F12B6EB53C003E5901 /* SmartAlarmClock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A3410EF2B6EB53C003E5901 /* SmartAlarmClock.xcdatamodeld */; };
 		7A3410F32B6EB53E003E5901 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A3410F22B6EB53E003E5901 /* Assets.xcassets */; };
@@ -29,14 +31,18 @@
 		7A3411322B70B913003E5901 /* SaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3411312B70B913003E5901 /* SaveButton.swift */; };
 		7A3411342B70C76E003E5901 /* CreateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3411332B70C76E003E5901 /* CreateButton.swift */; };
 		7A3411382B70D2C2003E5901 /* ScanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3411372B70D2C2003E5901 /* ScanButton.swift */; };
+		7ABA85D32B758143009FFDB5 /* ListNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABA85D22B758143009FFDB5 /* ListNameController.swift */; };
+		7AEC3C762B75C3D700BD9B63 /* TimerAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEC3C752B75C3D700BD9B63 /* TimerAlarmViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7A264ADD2B72518300A6825B /* SmartAlarmClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartAlarmClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A264AE02B72E0C000A6825B /* Euphoria.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Euphoria.mp3; sourceTree = "<group>"; };
+		7A264AE22B72EE3700A6825B /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		7A264AE42B72F73B00A6825B /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		7A3410E62B6EB53C003E5901 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A3410E82B6EB53C003E5901 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7A3410EA2B6EB53C003E5901 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7A3410EA2B6EB53C003E5901 /* CreateAlarmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlarmController.swift; sourceTree = "<group>"; };
 		7A3410ED2B6EB53C003E5901 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A3410F02B6EB53C003E5901 /* SmartAlarmClock.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmartAlarmClock.xcdatamodel; sourceTree = "<group>"; };
 		7A3410F22B6EB53E003E5901 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +61,8 @@
 		7A3411312B70B913003E5901 /* SaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButton.swift; sourceTree = "<group>"; };
 		7A3411332B70C76E003E5901 /* CreateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateButton.swift; sourceTree = "<group>"; };
 		7A3411372B70D2C2003E5901 /* ScanButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanButton.swift; sourceTree = "<group>"; };
+		7ABA85D22B758143009FFDB5 /* ListNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNameController.swift; sourceTree = "<group>"; };
+		7AEC3C752B75C3D700BD9B63 /* TimerAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerAlarmViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,7 @@
 		7A3410E52B6EB53C003E5901 /* SmartAlarmClock */ = {
 			isa = PBXGroup;
 			children = (
+				7ABA85D12B7580DC009FFDB5 /* TabBarController */,
 				7A34112C2B70A0DD003E5901 /* Componets */,
 				7A3411092B6EB78E003E5901 /* Services */,
 				7A3411022B6EB6A3003E5901 /* Models */,
@@ -130,7 +139,10 @@
 		7A3411012B6EB633003E5901 /* Controlers */ = {
 			isa = PBXGroup;
 			children = (
-				7A3410EA2B6EB53C003E5901 /* ViewController.swift */,
+				7A3410EA2B6EB53C003E5901 /* CreateAlarmController.swift */,
+				7A264AE22B72EE3700A6825B /* ScannerViewController.swift */,
+				7ABA85D22B758143009FFDB5 /* ListNameController.swift */,
+				7AEC3C752B75C3D700BD9B63 /* TimerAlarmViewController.swift */,
 			);
 			path = Controlers;
 			sourceTree = "<group>";
@@ -218,6 +230,14 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		7ABA85D12B7580DC009FFDB5 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				7A264AE42B72F73B00A6825B /* CustomTabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -299,11 +319,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A3410F12B6EB53C003E5901 /* SmartAlarmClock.xcdatamodeld in Sources */,
-				7A3410EB2B6EB53C003E5901 /* ViewController.swift in Sources */,
+				7A3410EB2B6EB53C003E5901 /* CreateAlarmController.swift in Sources */,
 				7A3411062B6EB723003E5901 /* Alarm.swift in Sources */,
 				7A3411142B6EBA24003E5901 /* ClockAlarm+CoreDataProperties.swift in Sources */,
 				7A3410E72B6EB53C003E5901 /* AppDelegate.swift in Sources */,
+				7A264AE32B72EE3700A6825B /* ScannerViewController.swift in Sources */,
 				7A34110C2B6EB7F1003E5901 /* ManagerCoreData.swift in Sources */,
+				7AEC3C762B75C3D700BD9B63 /* TimerAlarmViewController.swift in Sources */,
 				7A3411322B70B913003E5901 /* SaveButton.swift in Sources */,
 				7A3411082B6EB72D003E5901 /* Scanner.swift in Sources */,
 				7A34111D2B7024D7003E5901 /* ManagerSettingAlarmEvent.swift in Sources */,
@@ -313,6 +335,8 @@
 				7A3410E92B6EB53C003E5901 /* SceneDelegate.swift in Sources */,
 				7A3411172B6ECFC9003E5901 /* ManagerUserDefaults.swift in Sources */,
 				7A34111A2B6F0648003E5901 /* ManagerDataFormatting.swift in Sources */,
+				7ABA85D32B758143009FFDB5 /* ListNameController.swift in Sources */,
+				7A264AE52B72F73B00A6825B /* CustomTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,7 +412,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -442,7 +466,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -459,8 +483,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ACARHB9W6S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SmartAlarmClock/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to the camera to scan QR codes.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Recording audio is necessary for playing music in the background.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -488,8 +514,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ACARHB9W6S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SmartAlarmClock/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to the camera to scan QR codes.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Recording audio is necessary for playing music in the background.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

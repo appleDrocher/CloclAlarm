@@ -1,7 +1,7 @@
 import UIKit
 import Constraints
 
-class ViewController: UIViewController {
+class CreateAlarmController: UIViewController {
     let content = UIView()
     
     let alarmService = AlarmService()
@@ -17,16 +17,10 @@ class ViewController: UIViewController {
       
         let button1 = CreateButton()
         
-        let button2 = SaveButton()
-        
-        let button3 = ScanButton()
-      
         view.addSubview(content)
         content.addSubview(datePicker)
         content.addSubview(button1)
-        content.addSubview(button2)
-        content.addSubview(button3)
-      
+    
         
         content.layout
             .box(in: view)
@@ -42,20 +36,6 @@ class ViewController: UIViewController {
             .trailing(28)
             .height(80)
             .top(600)
-            .activate()
-        
-        button2.layout
-            .leading(28)
-            .trailing(28)
-            .height(80)
-            .top(500)
-            .activate()
-        
-        button3.layout
-            .leading(28)
-            .trailing(28)
-            .height(80)
-            .top(400)
             .activate()
         
     }

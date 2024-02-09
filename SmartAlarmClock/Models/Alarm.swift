@@ -6,6 +6,7 @@ struct Alarm {
     let isEnabled: Bool
     let repeatDays: [Weekday]
     let sound: Sound
+    let repeatAlarm: Bool
 }
 
 
