@@ -2,7 +2,7 @@ import UIKit
 
 class CustomTabBarController: UITabBarController {
 
-    let tabBarHeight: CGFloat = 50
+    let tabBarHeight: CGFloat = 100
     let statusBarHeight: CGFloat = 70
     let tabBarView = UIView()
 

@@ -4,7 +4,8 @@ import Constraints
 class ListNameController: UIViewController {
     let content = UIView()
     
-    
+    let manager = CoreManager.shared
+     
     let alarmService = AlarmService()
     
     override func viewDidLoad() {
@@ -16,6 +17,9 @@ class ListNameController: UIViewController {
             button.addTarget(self, action: #selector(goToScan), for: .touchUpInside)
             return button
         }()
+        
+        var label = UILabel()
+    
         
         view.addSubview(content)
         content.addSubview(button3)

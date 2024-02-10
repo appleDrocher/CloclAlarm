@@ -8,16 +8,12 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let backButton = UIBarButtonItem()
-          backButton.title = "Список вещей"
-          self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
-      
-
-
         setup()
         view.backgroundColor = UIColor.black
         navigationController?.navigationBar.tintColor = .white
-
+        let backButton = UIBarButtonItem()
+        backButton.title = "Список вещей"
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         captureSession = AVCaptureSession()
 
         guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
@@ -51,6 +47,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         previewLayer.frame = CGRect(x: (view.frame.width - 204) / 2, y: (view.frame.height - 204) / 2, width: 204, height: 204)
         previewLayer.videoGravity = .resizeAspectFill
+        view.layer.cornerRadius = 24
         view.layer.addSublayer(previewLayer)
 
         // Start the capture session on a background thread
@@ -95,7 +92,10 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             found(code: stringValue)
         }
 
-        dismiss(animated: true)
+        // Push to the next controller
+        let nextController = SaveProduktController()
+       // nextController.scannedCode = stringValue
+        navigationController?.pushViewController(nextController, animated: true)
     }
 
     func found(code: String) {
@@ -112,5 +112,12 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
 
     private func setup() {
 
+           let Scanerview = UIView()
+            Scanerview.frame = CGRect(x: 0, y: 0, width: 204, height: 204)
+            Scanerview.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.16).cgColor
+            Scanerview.layer.cornerRadius = 24
+            Scanerview.center = view.center
+            view.addSubview(Scanerview)
+        }
     }
-}
+
