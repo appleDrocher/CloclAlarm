@@ -3,5 +3,6 @@
     <entity name="ClockAlarm" representedClassName="ClockAlarm" syncable="YES">
         <attribute name="emoji" optional="YES" attributeType="String"/>
         <attribute name="listName" optional="YES" attributeType="String"/>
+        <attribute name="scanData" optional="YES" attributeType="String"/>
     </entity>
 </model>

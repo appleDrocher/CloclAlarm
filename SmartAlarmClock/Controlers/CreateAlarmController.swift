@@ -35,7 +35,7 @@ class CreateAlarmController: UIViewController {
             .leading(28)
             .trailing(28)
             .height(80)
-            .top(600)
+            .top.equal(content.bottom, -66)
             .activate()
         
     }

@@ -1,10 +1,4 @@
-//
-//  TimerAlarmViewController.swift
-//  SmartAlarmClock
-//
-//  Created by Урутян Левон on 09.02.2024.
-//
-
+import Constraints
 import UIKit
 
 class TimerAlarmViewController: UIViewController {
@@ -32,7 +26,7 @@ class TimerAlarmViewController: UIViewController {
                 .leading(28)
                 .trailing(28)
                 .height(80)
-                .top(600)
+                .top.equal(content.bottom, -66)
                 .activate()
             
         }

@@ -9,11 +9,14 @@ class SaveProduktController: UIViewController {
     
     let manager = CoreManager.shared
     
+    weak var delegate: SaveProduktControllerDelegate?
+    
     lazy var dismissButton: UIButton = {
         let button = UIButton()
         button.addTarget(self, action: #selector(selectEmojiAction), for: .touchUpInside)
         button.layer.backgroundColor = UIColor(red: 0.933, green: 0.931, blue: 0.931, alpha: 1).cgColor
         button.layer.cornerRadius = 8
+     
         button.setTitle("🙋🏻‍♂️", for: .normal)
         return button
     }()
@@ -22,8 +25,10 @@ class SaveProduktController: UIViewController {
     
     let button1 = CreateButton()
     
-    
     let textField = TextField()
+    
+    var scanData = UILabel()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +41,16 @@ class SaveProduktController: UIViewController {
         button1.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
         button1.isEnabled = false
         button1.alpha = 0.5
+        dismissButton.titleLabel?.font = UIFont.systemFont(ofSize: 28)
+
         textField.delegate = self
-       
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        let currentDate = dateFormatter.string(from: Date())
+        
+        scanData.text = currentDate
+        
+        
         view.addSubview(content)
         content.addSubview(shadowView)
         content.addSubview(button1)
@@ -56,12 +69,11 @@ class SaveProduktController: UIViewController {
             .top(28)
             .activate()
         
-        
         button1.layout
             .leading.equal(shadowView)
             .trailing.equal(shadowView)
             .height(80)
-            .top(160)
+            .bottom.equal(content.bottom, 33)
             .activate()
         
         dismissButton.layout
@@ -69,7 +81,6 @@ class SaveProduktController: UIViewController {
             .top(20)
             .width(64)
             .height(64)
-        
             .activate()
         
         textField.layout
@@ -90,10 +101,21 @@ class SaveProduktController: UIViewController {
     }
     
     @objc private func saveButtonTapped() {
+        self.manager.addNewAlarm(listName: textField.text ?? "", Emoji: dismissButton.titleLabel?.text ?? "", scanData: scanData.text ?? "")
+        if let listNameController = navigationController?.viewControllers.first as? ListNameController {
+            DispatchQueue.main.async {
+                listNameController.updateItems()
+            }
+        }
         
-        self.manager.addNewAlarm(listName: textField.text ?? "", Emoji: dismissButton.titleLabel?.text ?? "")
-        
+        UIView.animate(withDuration: 0.3) {
+            self.view.setNeedsLayout()
+            self.view.layoutIfNeeded()
+        }
+        delegate?.didSaveNewItem()
         navigationController?.popToRootViewController(animated: true)
+       
+        
     }
 }
 
