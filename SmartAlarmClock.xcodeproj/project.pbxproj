@@ -29,8 +29,9 @@
 		7A3411322B70B913003E5901 /* SaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3411312B70B913003E5901 /* SaveButton.swift */; };
 		7A3411342B70C76E003E5901 /* CreateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3411332B70C76E003E5901 /* CreateButton.swift */; };
 		7A3411382B70D2C2003E5901 /* ScanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3411372B70D2C2003E5901 /* ScanButton.swift */; };
+		7AA8E31E2B7A9B5F00986377 /* MathManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA8E31D2B7A9B5F00986377 /* MathManager.swift */; };
 		7ABA85D32B758143009FFDB5 /* ListNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABA85D22B758143009FFDB5 /* ListNameController.swift */; };
-		7AEC3C762B75C3D700BD9B63 /* TimerAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEC3C752B75C3D700BD9B63 /* TimerAlarmViewController.swift */; };
+		7AEC3C762B75C3D700BD9B63 /* TimerAlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEC3C752B75C3D700BD9B63 /* TimerAlarmController.swift */; };
 		7AEC3C782B76632100BD9B63 /* SaveProduktController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEC3C772B76632100BD9B63 /* SaveProduktController.swift */; };
 		7AEC3C7B2B766D4300BD9B63 /* ShadowedRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEC3C7A2B766D4300BD9B63 /* ShadowedRoundedView.swift */; };
 		7AEC3C7D2B76C35400BD9B63 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEC3C7C2B76C35400BD9B63 /* TextField.swift */; };
@@ -63,8 +64,9 @@
 		7A3411312B70B913003E5901 /* SaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButton.swift; sourceTree = "<group>"; };
 		7A3411332B70C76E003E5901 /* CreateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateButton.swift; sourceTree = "<group>"; };
 		7A3411372B70D2C2003E5901 /* ScanButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanButton.swift; sourceTree = "<group>"; };
+		7AA8E31D2B7A9B5F00986377 /* MathManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathManager.swift; sourceTree = "<group>"; };
 		7ABA85D22B758143009FFDB5 /* ListNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNameController.swift; sourceTree = "<group>"; };
-		7AEC3C752B75C3D700BD9B63 /* TimerAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerAlarmViewController.swift; sourceTree = "<group>"; };
+		7AEC3C752B75C3D700BD9B63 /* TimerAlarmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerAlarmController.swift; sourceTree = "<group>"; };
 		7AEC3C772B76632100BD9B63 /* SaveProduktController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveProduktController.swift; sourceTree = "<group>"; };
 		7AEC3C7A2B766D4300BD9B63 /* ShadowedRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedRoundedView.swift; sourceTree = "<group>"; };
 		7AEC3C7C2B76C35400BD9B63 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
@@ -151,7 +153,7 @@
 				7A3410EA2B6EB53C003E5901 /* CreateAlarmController.swift */,
 				7A264AE22B72EE3700A6825B /* ScannerViewController.swift */,
 				7ABA85D22B758143009FFDB5 /* ListNameController.swift */,
-				7AEC3C752B75C3D700BD9B63 /* TimerAlarmViewController.swift */,
+				7AEC3C752B75C3D700BD9B63 /* TimerAlarmController.swift */,
 				7AEC3C772B76632100BD9B63 /* SaveProduktController.swift */,
 			);
 			path = Controlers;
@@ -169,6 +171,7 @@
 		7A3411092B6EB78E003E5901 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				7AA8E31C2B7A9B2800986377 /* MathService */,
 				7A34111B2B70233D003E5901 /* SettingAlarmEvent */,
 				7A3411182B6F058D003E5901 /* DateFormatting */,
 				7A3411152B6ECFAA003E5901 /* UserDefaults */,
@@ -247,6 +250,14 @@
 			children = (
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		7AA8E31C2B7A9B2800986377 /* MathService */ = {
+			isa = PBXGroup;
+			children = (
+				7AA8E31D2B7A9B5F00986377 /* MathManager.swift */,
+			);
+			path = MathService;
 			sourceTree = "<group>";
 		};
 		7ABA85D12B7580DC009FFDB5 /* TabBarController */ = {
@@ -361,7 +372,7 @@
 				7A3410E72B6EB53C003E5901 /* AppDelegate.swift in Sources */,
 				7A264AE32B72EE3700A6825B /* ScannerViewController.swift in Sources */,
 				7A34110C2B6EB7F1003E5901 /* ManagerCoreData.swift in Sources */,
-				7AEC3C762B75C3D700BD9B63 /* TimerAlarmViewController.swift in Sources */,
+				7AEC3C762B75C3D700BD9B63 /* TimerAlarmController.swift in Sources */,
 				7A3411322B70B913003E5901 /* SaveButton.swift in Sources */,
 				7AEC3C7D2B76C35400BD9B63 /* TextField.swift in Sources */,
 				7A3411082B6EB72D003E5901 /* Scanner.swift in Sources */,
@@ -375,6 +386,7 @@
 				7AEC3C7B2B766D4300BD9B63 /* ShadowedRoundedView.swift in Sources */,
 				7A34111A2B6F0648003E5901 /* ManagerDataFormatting.swift in Sources */,
 				7ABA85D32B758143009FFDB5 /* ListNameController.swift in Sources */,
+				7AA8E31E2B7A9B5F00986377 /* MathManager.swift in Sources */,
 				7AEC3C782B76632100BD9B63 /* SaveProduktController.swift in Sources */,
 				7A264AE52B72F73B00A6825B /* CustomTabBarController.swift in Sources */,
 			);

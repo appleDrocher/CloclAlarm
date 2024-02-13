@@ -1,7 +1,7 @@
 import Constraints
 import UIKit
 
-class TimerAlarmViewController: UIViewController {
+class TimerAlarmController: UIViewController {
     
         let content = UIView()
       
@@ -26,7 +26,7 @@ class TimerAlarmViewController: UIViewController {
                 .leading(28)
                 .trailing(28)
                 .height(80)
-                .top.equal(content.bottom, -66)
+                .bottom(42)
                 .activate()
             
         }

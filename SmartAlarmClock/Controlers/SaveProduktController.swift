@@ -73,7 +73,7 @@ class SaveProduktController: UIViewController {
             .leading.equal(shadowView)
             .trailing.equal(shadowView)
             .height(80)
-            .bottom.equal(content.bottom, 33)
+            .bottom(42)
             .activate()
         
         dismissButton.layout

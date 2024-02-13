@@ -9,6 +9,20 @@ class CreateAlarmController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+      
+        
+         
+        let service = MathService()
+        
+        let example = service.generateExample()
+        print("Пример:", example)
+        
+        if let result = service.resolveExample(example) {
+            print("Результат:", result)
+        
+            let answers = service.generateAnswers(result)
+            print("Варианты ответов:", answers)
+        }
         
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .dateAndTime
@@ -35,7 +49,7 @@ class CreateAlarmController: UIViewController {
             .leading(28)
             .trailing(28)
             .height(80)
-            .top.equal(content.bottom, -66)
+            .bottom(42)
             .activate()
         
     }

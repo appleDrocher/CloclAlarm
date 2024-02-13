@@ -1,5 +1,7 @@
 import UIKit
 
+//у меня почему-то создается два таббара, один снизу другой сверху, сделай что бы нижнего или не было или он не работал
+
 class CustomTabBarController: UITabBarController {
 
     let tabBarHeight: CGFloat = 100
@@ -10,10 +12,12 @@ class CustomTabBarController: UITabBarController {
         super.viewDidLoad()
 
       
+        self.tabBar.isHidden = true
+        
         let firstViewController = CreateAlarmController()
       
 
-        let secondViewController = TimerAlarmViewController()
+        let secondViewController = TimerAlarmController()
        
 
         let thirdViewController = ListNameController()

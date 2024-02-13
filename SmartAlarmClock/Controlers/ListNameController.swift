@@ -82,7 +82,7 @@ class ListNameController: UIViewController, UITableViewDataSource, UITableViewDe
             .leading(28)
             .trailing(28)
             .height(80)
-            .top.equal(content.bottom, -66)
+            .bottom(42)
             .activate()
         
         shadowView.layout
@@ -116,8 +116,7 @@ class ListNameController: UIViewController, UITableViewDataSource, UITableViewDe
         navigationController?.pushViewController(controller, animated: true)
     }
   
-    
-    public func updateItems() {
+     func updateItems() {
         DispatchQueue.main.async { [self] in
             items = manager.clockAlarm.map({ clockAlar in
                     .init(name: clockAlar.listName ?? "", image: clockAlar.emoji ?? "", scanData: clockAlar.scanData ?? "")
@@ -126,9 +125,7 @@ class ListNameController: UIViewController, UITableViewDataSource, UITableViewDe
             itemsName.text = items.last?.name
             itemsEmoji.text = items.last?.image
             scanedData.text = items.last?.scanData
-            
-            view.layoutIfNeeded()
-            
+        
         }
     }
 }
